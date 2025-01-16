@@ -66,5 +66,12 @@ vim.keymap.set('n', '<C-k>', ':wincmd k<CR>', { noremap = true, silent = true })
 vim.keymap.set('i', 'jk', '<Esc>l', { noremap = true, silent = true })
 vim.keymap.set('i', 'kj', '<Esc>', { noremap = true, silent = true })
 
+
+
+vim.opt.undofile = true                      -- Enable persistent undo
+vim.opt.undodir = vim.fn.stdpath("config") .. "/undo" -- Directory for undo files
+
+
 vim.keymap.set('n', '<leader>sh', ':!./%\n', {noremap = true, silent = true , desc = "execute current bash script"})
+
 
