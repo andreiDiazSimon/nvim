@@ -11,7 +11,6 @@ vim.keymap.set('n', '<leader>e', function()
 	end
 end, { noremap = true, silent = true })
 
-
 vim.keymap.set('n', '<C-s>', function()
 	vim.cmd(':w')
 end, { noremap = true, silent = true })
@@ -41,6 +40,10 @@ vim.keymap.set('n', 'gh', '0', { noremap = true, silent = true, desc = "go utmos
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.mouse = 'a'
+
+-- you set it to a very large value (999) the cursor line will always be in the middle of the window (except at the start or end of the file or	when long lines wrap)
+vim.opt.scrolloff = 999
+
 -- Use the system clipboard for all yank, delete, change and paste operations
 vim.opt.clipboard = 'unnamedplus'
 -- Enable case-insensitive search
@@ -66,12 +69,8 @@ vim.keymap.set('n', '<C-k>', ':wincmd k<CR>', { noremap = true, silent = true })
 vim.keymap.set('i', 'jk', '<Esc>l', { noremap = true, silent = true })
 vim.keymap.set('i', 'kj', '<Esc>', { noremap = true, silent = true })
 
-
-
-vim.opt.undofile = true                      -- Enable persistent undo
+vim.opt.undofile = true                      -- Enable persistent undo and redo
 vim.opt.undodir = vim.fn.stdpath("config") .. "/undo" -- Directory for undo files
 
 
 vim.keymap.set('n', '<leader>sh', ':!./%\n', {noremap = true, silent = true , desc = "execute current bash script"})
-
-
