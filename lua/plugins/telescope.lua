@@ -28,11 +28,15 @@ return {
 				prompt_prefix = "Ɛ=> ",
 				selection_caret = "Ɛ=> ",
 				border = true,
-				borderchars = { "═", "║", "═", "║", "╔", "╗", "╝", "╚" },
+				-- borderchars = { "═", "║", "═", "║", "╔", "╗", "╝", "╚" },
 				path_display = { "absolute" },
 				preview = { treesitter = false },
 			},
 		})
+		vim.api.nvim_set_hl(0, "TelescopePreviewBorder", { fg = "#5a5b5e", bg = "none" })
+		vim.api.nvim_set_hl(0, "TelescopeResultsBorder", { fg = "#5a5b5e", bg = "none" })
+		vim.api.nvim_set_hl(0, "TelescopePromptBorder", { fg = '#5a5b5e', bg = 'none' })
+		-- #5a5b5e
 	end,
 	dependencies = { "nvim-lua/plenary.nvim" },
 }
