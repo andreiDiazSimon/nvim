@@ -40,6 +40,9 @@ vim.opt.guicursor = ""
 vim.opt.undofile = true                               -- Enable persistent undo and redo
 vim.opt.undodir = vim.fn.stdpath("config") .. "/undo" -- Directory for undo files
 
+vim.g.netrw_keepdir = 0
+vim.g.netrw_winsize = 25
+
 vim.keymap.set('n', '<leader>l', ':Lazy show<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>m', ':Mason<CR>', { noremap = true, silent = true })
 

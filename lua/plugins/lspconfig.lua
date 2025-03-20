@@ -33,7 +33,7 @@ return {
 		---------------LSP FOR LUA-----------------
 
 		---------------LSP FOR BASH-----------------
-		require'lspconfig'.bashls.setup{}
+		require 'lspconfig'.bashls.setup {}
 		---------------LSP FOR BASH-----------------
 
 		---------------LSP FOR TAILWINDCSS-----------------
