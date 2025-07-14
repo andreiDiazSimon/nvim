@@ -31,6 +31,12 @@ return {
 		})
 		---------------LSP FOR LUA-----------------
 		---------------LSP FOR LUA-----------------
+		
+
+
+		---------------LSP FOR JAVA-----------------
+  		require'lspconfig'.jdtls.setup{}
+		---------------LSP FOR JAVA-----------------
 
 		---------------LSP FOR BASH-----------------
 		require 'lspconfig'.bashls.setup {}
